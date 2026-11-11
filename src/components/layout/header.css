@@ -1,0 +1,364 @@
+/* ==========================================================================
+   DEALPUSH HEADER STYLES (#2343C4)
+   ========================================================================== */
+
+.dp-header {
+  color: #ffffff;
+  padding: 2rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(35, 67, 196, 0.98);
+}
+
+.dp-header-static {
+  position: static;
+}
+
+.dp-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dp-logo {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  height: 36px;
+  line-height: 1;
+}
+
+.dp-logo-img {
+  max-height: 34px;
+  width: auto;
+}
+
+.dp-header-right {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.dp-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  height: 36px;
+}
+
+.dp-nav-link {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.92;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dp-nav-link:hover,
+.dp-nav-link.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   USER ADMIN STACK (Nombre arriba alineado con el nav + Panel debajo)
+   ========================================================================== */
+.dp-header-admin-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  position: relative;
+}
+
+.dp-user-pill,
+.dp-panel-pill {
+  height: 36px;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #2343C4;
+  border: none;
+  border-radius: 999px;
+  padding: 0 1.15rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  line-height: 1;
+}
+
+.dp-user-pill:hover,
+.dp-panel-pill:hover {
+  background: #DCE6F5;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.dp-user-name {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   USER GUEST PILL (Solo icono de user, sin texto ni panel)
+   ========================================================================== */
+.dp-header-guest-stack {
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+
+.dp-guest-pill {
+  width: 36px;
+  height: 36px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #2343C4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.dp-guest-pill:hover {
+  background: #DCE6F5;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================================================
+   USER DROPDOWN MENU
+   ========================================================================== */
+.dp-user-dropdown {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  background: #ffffff;
+  color: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+  padding: 0.85rem 1rem;
+  min-width: 210px;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: 1px solid rgba(220, 230, 245, 0.8);
+  animation: dpDropdownFade 0.15s ease-out;
+}
+
+@keyframes dpDropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dp-user-dropdown-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.dp-user-dropdown-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.dp-user-dropdown-email {
+  font-size: 0.78rem;
+  color: #64748b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dp-role-badge {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 0.25rem;
+  background: #DCE6F5;
+  color: #2343C4;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.dp-user-dropdown-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 0.45rem 0;
+}
+
+.dp-user-dropdown-item {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dp-panel-item {
+  color: #2343C4;
+}
+
+.dp-panel-item:hover {
+  background: #DCE6F5;
+  color: #1a3299;
+}
+
+.dp-logout-item {
+  color: #ef4444;
+}
+
+.dp-logout-item:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES - TABLET & ANDROID / MOBILE
+   (Sin alterar la vista en PC)
+   ========================================================================== */
+
+/* TABLET (<= 1024px) */
+@media (max-width: 1024px) {
+  .dp-header {
+    padding: 1.1rem 0;
+  }
+
+  .dp-header-right {
+    gap: 1.5rem;
+  }
+
+  .dp-nav {
+    gap: 1.25rem;
+  }
+
+  .dp-nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* ANDROID / MOBILE (<= 768px) */
+@media (max-width: 768px) {
+  .dp-header {
+    padding: 1.3rem 0;
+    backdrop-filter: blur(8px);
+  }
+
+  .dp-header-inner {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .dp-logo {
+    font-size: 1.25rem;
+  }
+
+  .dp-logo-img {
+    max-height: 28px;
+  }
+
+  .dp-header-right {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .dp-nav {
+    gap: 0.85rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dp-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dp-nav-link {
+    font-size: 0.88rem;
+    white-space: nowrap;
+    padding: 0.2rem 0;
+  }
+
+  .dp-header-admin-stack {
+    gap: 0.25rem;
+  }
+
+  .dp-user-pill,
+  .dp-panel-pill {
+    padding: 0.28rem 0.75rem;
+    font-size: 0.78rem;
+  }
+
+  .dp-guest-pill {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* SMALL ANDROID / MOBILE (<= 480px) */
+@media (max-width: 480px) {
+  .dp-nav {
+    gap: 0.6rem;
+  }
+
+  .dp-nav-link {
+    font-size: 0.82rem;
+  }
+
+  .dp-user-pill,
+  .dp-panel-pill {
+    padding: 0.25rem 0.65rem;
+    font-size: 0.75rem;
+  }
+
+  .dp-user-name {
+    max-width: 70px;
+  }
+}

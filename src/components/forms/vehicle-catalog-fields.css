@@ -1,0 +1,56 @@
+.vehicle-catalog-section {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.vehicle-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+}
+
+.vehicle-catalog-field,
+.vehicle-catalog-add label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.45rem;
+  color: var(--text-soft);
+}
+
+.vehicle-form .vehicle-catalog-grid input,
+.vehicle-form .vehicle-catalog-grid select,
+.vehicle-form .vehicle-catalog-add input {
+  width: 100%;
+}
+
+.vehicle-catalog-add {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.65rem;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+}
+
+.vehicle-catalog-add-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.vehicle-catalog-add-actions .button {
+  padding: 0.55rem 0.75rem;
+}
+
+.vehicle-catalog-error {
+  color: var(--danger);
+}
+
+@media (max-width: 760px) {
+  .vehicle-catalog-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,15 @@
+.dp-route-content {
+  display: contents;
+}
+
+.dp-route-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--primary, #2343c4);
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  visibility: hidden;
+  pointer-events: none;
+  will-change: transform;
+}

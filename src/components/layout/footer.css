@@ -1,0 +1,222 @@
+/* ==========================================================================
+   DEALPUSH FOOTER STYLES
+   ========================================================================== */
+
+.dp-footer {
+  background-color: var(--bg-subtle);
+  color: var(--text);
+  padding: 5rem 0 3.5rem;
+  border-top: 1px solid rgba(35, 67, 196, 0.14);
+  font-family: var(--font-sans);
+}
+
+.dp-footer-catalog {
+  background-color: #2343C4;
+  color: #ffffff;
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.dp-footer-catalog .dp-footer-main {
+  border-bottom-color: rgba(255, 255, 255, 0.24);
+}
+
+.dp-footer-catalog .dp-footer-logo strong,
+.dp-footer-catalog .dp-footer-nav a,
+.dp-footer-catalog .dp-footer-socials a {
+  color: #ffffff;
+}
+
+.dp-footer-catalog .dp-footer-nav a:hover,
+.dp-footer-catalog .dp-footer-legal a:hover {
+  color: #DCE6F5;
+}
+
+.dp-footer-catalog .dp-footer-legal a,
+.dp-footer-catalog .dp-footer-sub p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.dp-footer-catalog .dp-footer-sub-title {
+  color: #DCE6F5;
+}
+
+.dp-footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  align-items: flex-start;
+  gap: 3rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(35, 67, 196, 0.18);
+}
+
+.dp-footer-logo strong {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.03em;
+}
+
+.dp-footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dp-footer-nav a {
+  color: var(--text);
+  font-size: 0.98rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.dp-footer-nav a:hover {
+  color: var(--primary);
+}
+
+.dp-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dp-footer-socials a {
+  color: var(--primary);
+  display: inline-flex;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.dp-footer-socials a:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.dp-footer-legal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: right;
+}
+
+.dp-footer-legal a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.dp-footer-legal a:hover {
+  color: var(--primary);
+}
+
+/* 4 columnas inferiores */
+.dp-footer-sub {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.dp-footer-sub-title {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.65rem;
+}
+
+.dp-footer-sub p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0 0 0.3rem;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES - TABLET & ANDROID / MOBILE
+   (Sin alterar la vista en PC)
+   ========================================================================== */
+
+/* TABLET (<= 1024px) */
+@media (max-width: 1024px) {
+  .dp-footer {
+    padding: 4rem 0 3rem;
+  }
+
+  .dp-footer-main {
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .dp-footer-sub {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+    padding-top: 2.5rem;
+  }
+}
+
+/* ANDROID / MOBILE (<= 768px) */
+@media (max-width: 768px) {
+  .dp-footer {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .dp-footer-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .dp-footer-brand {
+    text-align: left;
+  }
+
+  .dp-footer-legal ul {
+    text-align: left;
+  }
+
+  .dp-footer-socials {
+    gap: 1.25rem;
+  }
+
+  .dp-footer-socials a svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .dp-footer-sub {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding-top: 2rem;
+  }
+}
+
+/* SMALL ANDROID / MOBILE (<= 480px) */
+@media (max-width: 480px) {
+  .dp-footer {
+    padding: 3rem 0 2rem;
+  }
+
+  .dp-footer-logo strong {
+    font-size: 1.5rem;
+  }
+
+  .dp-footer-nav a {
+    font-size: 0.92rem;
+  }
+
+  .dp-footer-sub {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-top: 1.75rem;
+  }
+}

@@ -1,0 +1,40 @@
+.settings-form-root {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.settings-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.settings-form label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--text-soft);
+}
+
+.settings-form input[type='color'] {
+  min-height: 48px;
+  padding: 0.35rem;
+}
+
+.settings-form textarea {
+  resize: vertical;
+}
+
+.settings-wide {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 800px) {
+  .settings-form-root,
+  .settings-form {
+    grid-template-columns: 1fr;
+  }
+}

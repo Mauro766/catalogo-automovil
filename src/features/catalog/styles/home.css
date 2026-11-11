@@ -1,0 +1,701 @@
+/* ==========================================================================
+   HOME PAGE SECTION STYLES
+   - Hero Section (#2343C4)
+   - Features Section (#DCE6F5 & Cards #2343C4)
+   - Catalog Section (Grid 3x2)
+   - CTA Help Section (#2343C4)
+   ========================================================================== */
+
+.dp-home {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO AZUL (#2343C4) CON CURVAS DE PISTA PUNTEADAS
+   -------------------------------------------------------------------------- */
+.dp-hero {
+  background-color: #2343C4;
+  color: #ffffff;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+.dp-hero-decorations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.dp-hero-curve {
+  position: absolute;
+  width: 380px;
+  height: auto;
+  opacity: 0.95;
+}
+
+.dp-hero-curve-top {
+  top: 1px;
+  left: 0%;
+}
+
+.dp-hero-vehicle-animation {
+  position: absolute;
+  right: -330px;
+  bottom: -295px;
+  width: min(48vw, 890px);
+  height: auto;
+  opacity: 0.95;
+}
+
+.dp-hero-content {
+  position: relative;
+  z-index: 10;
+  width: 96%;
+}
+
+.dp-hero-text {
+  max-width: 700px;
+}
+
+.dp-hero-title {
+  font-size: clamp(3.5rem, 8vw, 5.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.85rem;
+  line-height: 0.95;
+}
+
+.dp-hero-sub {
+  color: #ffffff;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 400;
+  line-height: 1.45;
+  margin: 0;
+  opacity: 0.92;
+  text-transform: none;
+}
+
+/* Botón Contacto en la esquina inferior derecha, fuera del contenedor guía */
+.dp-hero-contact-btn {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 20;
+  background: #ffffff;
+  color: #2343C4;
+  padding: 0.6rem 1.65rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dp-hero-contact-btn:hover {
+  background: #DCE6F5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   2. CARDS DE DETALLES (Fondo #DCE6F5, 3 cards #2343C4)
+   -------------------------------------------------------------------------- */
+.dp-features-section {
+  background-color: #DCE6F5;
+  padding: 5rem 0 3.5rem;
+}
+
+.dp-features-title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 700;
+  color: #2343C4;
+  line-height: 1.15;
+  margin: 0 0 3rem;
+  letter-spacing: -0.02em;
+}
+
+.dp-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.dp-feature-card {
+  background-color: #2343C4;
+  color: #ffffff;
+  padding: 2.2rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(35, 67, 196, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 190px;
+}
+
+.dp-feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 1rem;
+  line-height: 1.25;
+}
+
+.dp-feature-card p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. CATÁLOGO DE VEHÍCULOS (Fondo #DCE6F5 con cards de producto)
+   -------------------------------------------------------------------------- */
+.dp-catalog-section {
+  background-color: #DCE6F5;
+  padding: 3rem 0 5rem;
+}
+
+.dp-catalog-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.75rem;
+}
+
+.dp-catalog-title {
+  font-size: clamp(2rem, 3.8vw, 2.85rem);
+  font-weight: 700;
+  color: #2343C4;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.dp-catalog-desc {
+  font-size: 0.95rem;
+  color: #2343C4;
+  opacity: 0.85;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.dp-catalog-tabs {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 0.35rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(35, 67, 196, 0.08);
+}
+
+.dp-tab {
+  background: transparent;
+  border: none;
+  padding: 0.55rem 1.35rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2343C4;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dp-tab.active {
+  background: #2343C4;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.dp-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.dp-loading {
+  text-align: center;
+  padding: 3rem 0;
+  color: #2343C4;
+  font-weight: 500;
+}
+
+.dp-catalog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  gap: 1.5rem;
+}
+
+.dp-catalog-disclaimer {
+  color: #2343C4;
+  font-size: 0.78rem;
+  opacity: 0.8;
+}
+
+.dp-catalog-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dp-btn-outline {
+  background: transparent;
+  color: #2343C4;
+  border: 1.5px solid #2343C4;
+  padding: 0.65rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.dp-btn-outline:hover {
+  background: rgba(35, 67, 196, 0.08);
+}
+
+.dp-btn-solid {
+  background: #2343C4;
+  color: #ffffff;
+  border: 1.5px solid #2343C4;
+  padding: 0.65rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(35, 67, 196, 0.2);
+}
+
+.dp-btn-solid:hover {
+  background: #182e88;
+  border-color: #182e88;
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   4. BANNER CTA AZUL (#2343C4) "¿Necesitás ayuda...?"
+   -------------------------------------------------------------------------- */
+.dp-cta-section {
+  background-color: #2343C4;
+  color: #ffffff;
+  padding: 5.5rem 0;
+  position: relative;
+}
+
+.dp-cta-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.dp-cta-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.dp-cta-title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.dp-cta-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0 0 2rem;
+}
+
+.dp-cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dp-cta-btn-white {
+  background: #ffffff;
+  color: #2343C4;
+  border: 1.5px solid #ffffff;
+  padding: 0.75rem 1.8rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dp-cta-btn-white:hover {
+  background: #DCE6F5;
+  transform: translateY(-1px);
+}
+
+.dp-cta-btn-ghost {
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  padding: 0.75rem 1.8rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.dp-cta-btn-ghost:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Cards translúcidas laterales */
+.dp-cta-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.dp-cta-info-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.dp-cta-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.dp-cta-info-text strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.dp-cta-info-text p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES - TABLET & ANDROID / MOBILE
+   (Sin alterar la vista en PC)
+   ========================================================================== */
+
+/* TABLET (<= 1024px) */
+@media (max-width: 1024px) {
+  .dp-hero {
+    height: auto;
+    min-height: 460px;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .dp-hero-title {
+    font-size: clamp(3rem, 7vw, 4.5rem);
+  }
+
+  .dp-hero-vehicle-animation {
+    right: -190px;
+    bottom: -190px;
+    width: 430px;
+  }
+
+  .dp-features-section {
+    padding: 4rem 0 3rem;
+  }
+
+  .dp-features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .dp-feature-card {
+    padding: 1.8rem 1.5rem;
+    min-height: 180px;
+  }
+
+  .dp-feature-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .dp-feature-card p {
+    font-size: 0.88rem;
+  }
+
+  .dp-catalog-section {
+    padding: 2.5rem 0 4rem;
+  }
+
+  .dp-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .dp-cta-section {
+    padding: 4.5rem 0;
+  }
+
+  .dp-cta-grid {
+    gap: 2.5rem;
+  }
+
+  .dp-cta-title {
+    font-size: clamp(1.85rem, 3.2vw, 2.4rem);
+  }
+}
+
+/* ANDROID / MOBILE (<= 768px) */
+@media (max-width: 768px) {
+  .dp-hero {
+    height: auto;
+    min-height: 480px;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+  }
+
+  .dp-hero-contact-btn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5rem 1.35rem;
+    font-size: 0.85rem;
+  }
+
+  .dp-hero-title {
+    font-size: 3.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .dp-hero-sub {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .dp-hero-curve-top {
+    width: 240px;
+    top: 0;
+    left: -20px;
+  }
+
+  .dp-hero-vehicle-animation {
+    right: -150px;
+    bottom: -170px;
+    width: 340px;
+  }
+
+  .dp-features-section {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .dp-features-title {
+    font-size: 1.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .dp-features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .dp-feature-card {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .dp-feature-card br {
+    display: none;
+  }
+
+  .dp-catalog-section {
+    padding: 2rem 0 3.5rem;
+  }
+
+  .dp-catalog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .dp-catalog-title {
+    font-size: 1.85rem;
+  }
+
+  .dp-catalog-desc {
+    font-size: 0.88rem;
+  }
+
+  .dp-catalog-desc br {
+    display: none;
+  }
+
+  .dp-catalog-tabs {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    padding: 0.25rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dp-catalog-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dp-tab {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .dp-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .dp-catalog-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .dp-catalog-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .dp-btn-outline,
+  .dp-btn-solid {
+    text-align: center;
+    width: 100%;
+    padding: 0.75rem 1.2rem;
+    font-size: 0.88rem;
+  }
+
+  .dp-cta-section {
+    padding: 3.5rem 0;
+  }
+
+  .dp-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .dp-cta-title {
+    font-size: 1.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .dp-cta-title br,
+  .dp-cta-desc br {
+    display: none;
+  }
+
+  .dp-cta-desc {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .dp-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .dp-cta-btn-white,
+  .dp-cta-btn-ghost {
+    text-align: center;
+    width: 100%;
+    padding: 0.75rem 1.2rem;
+  }
+
+  .dp-cta-cards {
+    gap: 0.85rem;
+  }
+
+  .dp-cta-info-card {
+    padding: 1rem 1.15rem;
+    gap: 1rem;
+  }
+
+  .dp-cta-icon-circle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .dp-cta-icon-circle svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dp-cta-info-text strong {
+    font-size: 0.9rem;
+  }
+
+  .dp-cta-info-text p {
+    font-size: 0.8rem;
+  }
+}
+
+/* SMALL ANDROID / MOBILE (<= 480px) */
+@media (max-width: 480px) {
+  .dp-hero-title {
+    font-size: 2.6rem;
+  }
+
+  .dp-hero-sub {
+    font-size: 0.88rem;
+  }
+
+  .dp-features-title,
+  .dp-catalog-title,
+  .dp-cta-title {
+    font-size: 1.6rem;
+  }
+
+  .dp-tab {
+    font-size: 0.76rem;
+    padding: 0.45rem 0.65rem;
+  }
+}
